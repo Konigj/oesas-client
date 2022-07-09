@@ -6,10 +6,9 @@ import ClosedMenu from '../assets/svgs/closedMenu.svg';
 type Props = {
 	toggleMenu: React.MouseEventHandler<HTMLButtonElement>;
 	isOpen: boolean;
-	pageTitle: string;
 };
 
-const Navigation = ({ toggleMenu, isOpen, pageTitle }: Props) => {
+const Navigation = ({ toggleMenu, isOpen }: Props) => {
 	const router = useRouter();
 
 	return (

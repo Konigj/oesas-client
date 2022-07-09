@@ -3,8 +3,8 @@ import Header from './Header';
 import Footer from './Footer';
 
 type Props = {
-	children?: React.ReactNode;
-	pageTitle: string;
+	children: React.ReactNode;
+	pageTitle?: string;
 };
 
 const PrimaryLayout: React.FC<Props> = ({ children, pageTitle }) => {
@@ -16,10 +16,10 @@ const PrimaryLayout: React.FC<Props> = ({ children, pageTitle }) => {
 					name='description'
 					content=' Oportunidad Europa - OESAS - Agencia de empleo polaca. '
 				/>
-				{/* <link rel="icon" href="/favicon.ico" />
-			<meta name="author" content="Konigj"/> */}
+				{/* <link rel="icon" href="/favicon.ico" /> */}
+				<meta name='author' content='Konigj' />
 			</Head>
-			<Header pageTitle={pageTitle} />
+			<Header />
 			{children}
 			<Footer />
 		</>

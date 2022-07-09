@@ -5,11 +5,7 @@ import Navigation from '../navigation/Navigation';
 import OeLogo from '../assets/logos/logoCircle.svg';
 import ButtonRedPoland from '../buttons/ButtonRedPoland';
 
-type Props = {
-	pageTitle: string;
-};
-
-const Header = ({ pageTitle }: Props) => {
+const Header = () => {
 	const [isOpen, setIsOpen] = useState(false);
 
 	const toggleMenu: React.MouseEventHandler<
@@ -44,16 +40,12 @@ const Header = ({ pageTitle }: Props) => {
 				<Link href='/' passHref>
 					<a className='flex flex-row items-center gap-4 w-1/3 hover:underline'>
 						<OeLogo height='70px' width='70px' />
-						<p className='hidden md:block font-bold text-lg lg:text-2xl'>
+						<p className='hidden md:block font-bold text-lg lg:text-2xl text-darkBlue'>
 							OPORTUNIDAD EUROPA
 						</p>
 					</a>
 				</Link>
-				<Navigation
-					pageTitle={pageTitle}
-					toggleMenu={toggleMenu}
-					isOpen={isOpen}
-				/>
+				<Navigation toggleMenu={toggleMenu} isOpen={isOpen} />
 				<ButtonRedPoland />
 			</div>
 			{isOpen && <Menu toggleMenu={toggleMenu} />}
