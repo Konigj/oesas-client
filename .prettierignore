@@ -1,0 +1,10 @@
+.storybook
+public
+build
+tailwind.config.js
+dist
+.html
+.json
+.yarn
+.next
+node_modules
