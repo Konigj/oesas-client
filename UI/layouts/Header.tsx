@@ -36,15 +36,17 @@ const Header = () => {
 
 	return (
 		<header className='flex flex-col shadow-sm '>
-			<div className='px-2 flex flex-row gap-4 py-4 justify-between items-center'>
-				<Link href='/' passHref>
-					<a className='flex flex-row items-center gap-4 w-1/3 hover:underline'>
-						<OeLogo height='70px' width='70px' />
-						<p className='hidden md:block font-bold text-lg lg:text-2xl text-darkBlue'>
-							OPORTUNIDAD EUROPA
-						</p>
-					</a>
-				</Link>
+			<div className='mx-4  flex flex-row gap-4 py-4 justify-between items-center'>
+				<div className='w-1/3'>
+					<Link href='/' passHref>
+						<a className='flex flex-row items-center gap-4 hover:font-black cursor-pointer max-w-max'>
+							<OeLogo height='70px' width='70px' />
+							<p className='hidden md:block font-bold text-lg lg:text-2xl text-darkBlue'>
+								OPORTUNIDAD EUROPA
+							</p>
+						</a>
+					</Link>
+				</div>
 				<Navigation toggleMenu={toggleMenu} isOpen={isOpen} />
 				<ButtonRedPoland />
 			</div>

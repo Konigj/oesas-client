@@ -13,41 +13,47 @@ const Menu = ({ toggleMenu }: Props) => {
 				<Link href='/'>
 					<a
 						onClick={toggleMenu}
-						className={`hover:underline ${router.pathname === '/' && ''}`}
+						className={`hover:underline ${
+							router.pathname === '/' && 'underline'
+						}`}
 					>
 						Inicio
 					</a>
 				</Link>
-				<div className='h-1 w-full bg-slate-800' />
-				<Link href='/tienda'>
+				<div className='h-[2px] w-full bg-slate-500' />
+				<Link href='/#nosotros'>
 					<a
 						onClick={toggleMenu}
-						className={`hover:underline ${router.pathname === '/tienda' && ''}`}
+						className={`hover:underline ${
+							router.pathname === '/#nosotros' && 'underline'
+						}`}
 					>
-						Tienda
+						Nosotros
 					</a>
 				</Link>
-				<div className='h-1 w-full bg-slate-800' />
-				<Link href='/ayuda'>
+				<div className='h-[2px] w-full bg-slate-500' />
+				<Link href='/ofertas'>
 					<a
 						onClick={toggleMenu}
-						className={`hover:underline ${router.pathname === '/ayuda' && ''}`}
+						className={`hover:underline ${
+							router.pathname === '/ofertas' && 'underline'
+						}`}
 					>
-						Ayuda
+						Ofertas
 					</a>
 				</Link>
-				<div className='h-1 w-full bg-slate-800' />
+				<div className='h-[2px] w-full bg-slate-500' />
 				<Link href='/contacto'>
 					<a
 						onClick={toggleMenu}
 						className={`hover:underline ${
-							router.pathname === '/contacto' && ''
+							router.pathname === '/contacto' && 'underline'
 						}`}
 					>
 						Contacto
 					</a>
 				</Link>
-				<div className='h-1 w-full bg-slate-800' />
+				<div className='h-[2px] w-full bg-slate-500' />
 				<button onClick={toggleMenu} className={'hover:underline'}>
 					Pracodawca
 				</button>

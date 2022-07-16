@@ -7,6 +7,7 @@ import TextSimple from '../UI/texts/TextSimple';
 import ButtonMainGreen from '../UI/buttons/ButtonMainGreen';
 import Image from 'next/image';
 import SubtitleMain from '../UI/texts/SubtitleMain';
+import SingleFaq from '../UI/Faq/SingleFaq';
 
 const Home: NextPage = () => {
 	return (
@@ -158,7 +159,23 @@ const Home: NextPage = () => {
 						/>
 					</div>
 				</section>
-				<TestimonySingle />
+
+				<section className='bg-lightGrayishBlue flex flex-col py-20'>
+					<TestimonySingle />
+				</section>
+
+				<section className='flex flex-col w-[80%] md:w-[60%] mx-auto my-20 gap-5 md:gap-10'>
+					<TitleMain
+						text={'Preguntas Frecuentes'}
+						styleClasses={'text-center'}
+					/>
+					<ul className='flex flex-col gap-y-10'>
+						<SingleFaq />
+						<SingleFaq />
+						<SingleFaq />
+						<SingleFaq />
+					</ul>
+				</section>
 			</main>
 		</PrimaryLayout>
 	);

@@ -23,7 +23,7 @@ const Navigation = ({ toggleMenu, isOpen }: Props) => {
 						Inicio
 					</a>
 				</Link>
-				<Link href='#nosotros'>
+				<Link href='/#nosotros'>
 					<a
 						className={`hover:underline ${
 							router.pathname === '/#nosotros' && 'underline'
