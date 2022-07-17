@@ -2,35 +2,33 @@ import React from 'react';
 import SubtitleMain from '../texts/SubtitleMain';
 import TextSimple from '../texts/TextSimple';
 
-const CardInfoOffer = () => {
+type Props = {
+	cardTitle: string;
+	description: string;
+	benefits: {
+		icon: any;
+		text: string;
+		altIcon: string;
+	}[];
+};
+
+const CardInfoOffer = ({ cardTitle, description, benefits }: Props) => {
 	return (
-		<div className='mx-auto shadow-lg bg-slate-100 rounded-b-3xl w-full hover:scale-105 transition-transform duration-300'>
+		<li className='mx-auto shadow-lg bg-slate-100 rounded-b-3xl h-full w-full hover:scale-105 transition-transform duration-300'>
 			<div className=' bg-darkBlue w-full h-[5%] mb-10'></div>
 			<div className='flex flex-col gap-y-5 w-[80%] mx-auto'>
-				<SubtitleMain
-					text='Oferta Madera'
-					styleClasses='text-center font-black'
-				/>
-				<TextSimple
-					styleClasses='text-black text-justify'
-					text='Oferta para trabajar en la producción de elementos de madera en una planta de producción.'
-				/>
+				<SubtitleMain text={cardTitle} styleClasses='text-center font-black' />
+				<TextSimple styleClasses='text-black text-justify' text={description} />
 			</div>
 			<div className='py-4 grid grid-cols-1 sm:grid-cols-2 w-[80%] mx-auto mb-10'>
-				<div className='flex flex-row gap-4'>
-					<span>+</span>
-					<TextSimple text='ajsfl;kas' />
-				</div>
-				<div className='flex flex-row gap-4'>
-					<span>+</span>
-					<TextSimple text='ajsfl;kas' />
-				</div>
-				<div className='flex flex-row gap-4'>
-					<span>+</span>
-					<TextSimple text='ajsfl;kas' />
-				</div>
+				{benefits.map((benefit, index) => (
+					<div key={index} className='flex flex-row gap-4'>
+						{benefit.icon}
+						<TextSimple text={benefit.text} />
+					</div>
+				))}
 			</div>
-		</div>
+		</li>
 	);
 };
 
