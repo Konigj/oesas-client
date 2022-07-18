@@ -37,6 +37,7 @@ const Home: NextPage = () => {
 						<ButtonMainGreen
 							text={'Conoce nuestras ofertas'}
 							extraClasses={'mx-auto'}
+							path={'/ofertas'}
 						/>
 					</div>
 				</section>
@@ -156,6 +157,7 @@ const Home: NextPage = () => {
 						<ButtonMainGreen
 							text={'Conoce nuestras ofertas'}
 							extraClasses={'mx-auto'}
+							path={'/ofertas'}
 						/>
 					</div>
 				</section>

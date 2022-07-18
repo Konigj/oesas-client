@@ -71,7 +71,7 @@ export const offersExample = [
 		tarjetasOferta: [
 			{
 				tituloTarjeta: 'Sobre el contrato',
-				icon: 'formato',
+				icon: <Icon />,
 				altIcon: 'ícono de formato',
 				textosTarjeta: [
 					{

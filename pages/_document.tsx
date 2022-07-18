@@ -17,7 +17,7 @@ const Document = () => {
 				<meta name="msapplication-TileColor" content="#da532c"/>
 				<meta name="theme-color" content="#ffffff"/> */}
 				<link
-					href='https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;600;700;900&display=swap'
+					href='https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700;800;900&display=swap'
 					rel='stylesheet'
 				/>
 			</Head>
